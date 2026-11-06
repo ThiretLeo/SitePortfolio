@@ -1,0 +1,263 @@
+/* ////////////////////////////////////Import/////////////////////////////////// */
+
+@font-face {
+  font-family: "DMSerifRegular";
+  src: url(./Assets/Polices/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+}
+
+/* ////////////////////////////////////Partie/////////////////////////////////// */
+
+header {
+  background-color: #64126b;
+  margin: 0;
+  padding: 0;
+  font-family: "DMSerifRegular", serif;
+}
+
+nav {
+  min-height: 3vh;
+  align-items: center;
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+nav .Logo {
+  font-size: 0.5rem;
+}
+nav .Home {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+}
+
+body {
+  background-color: #121212; /* Noir très foncé / Anthracite (plus agréable que le noir pur #000) */
+  color: #ffffff; /* Texte en blanc */
+  margin: 0;
+  font-family: "DMSerifRegular", serif;
+  min-height: 100vh; /* Assure que le corps prend au moins toute la hauteur de la fenêtre */
+}
+
+main {
+  min-height: 1000px;
+  width: 95%;
+  background-color: #1e1e1e;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+footer {
+  background-color: #64126b;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+  font-family: "DMSerifRegular", serif;
+  position: relative; /* Pour que le footer soit au-dessus du contenu si nécessaire */
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px 0; /* Espacement vertical entre les paragraphes */
+  font-size: 0.9rem; /* Taille de police légèrement plus petite pour le footer */
+}
+
+.barre-Horizontale {
+  display: inline-block;
+  width: 500px; /* Épaisseur de la barre */
+  height: 2px; /* Hauteur proportionnelle au texte */
+  background-color: #ffffff; /* Couleur de la barre */
+  vertical-align: middle; /* Alignement vertical avec le texte */
+  margin: 10px 15%; /* Espacement autour de la barre */
+}
+
+.barre-verticale {
+  display: inline-block;
+  width: 2px; /* Épaisseur de la barre */
+  height: 15rem; /* Hauteur proportionnelle au texte */
+  background-color: #ffffff; /* Couleur de la barre */
+  vertical-align: middle; /* Alignement vertical avec le texte */
+  margin: 0px 10px; /* Espacement autour de la barre */
+}
+
+/* ////////////////////////////////////
+Menu/////////////////////////////////// */
+.nav-links > ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  align-items: flex-start;
+}
+
+.nav-links > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.Menu_deroulent {
+  position: relative;
+}
+
+.Sous-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  left: 25px;
+  display: none;
+  background-color: #64126b;
+  width: max-content;
+  transition: 0.5s;
+}
+
+.Sous-menu:hover > a {
+  background-color: #333;
+}
+
+.Menu_deroulent:hover .Sous-menu {
+  display: block;
+}
+
+/* ////////////////////////////////////Box/////////////////////////////////// */
+
+.Head {
+  margin: 10px auto;
+}
+
+.Box1,
+.Box2,
+.Box3 {
+  /* background-color: #1e1e1e;  */
+  margin: 10px auto;
+  border: 3px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 40% 10% 50%; /* Ajustez les pourcentages selon vos besoins */
+  align-items: center;
+}
+
+.Box1:hover,
+.Box2:hover,
+.Box3:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: scale(1.01);
+}
+.Box1 img,
+.Box2 img,
+.Box3 img {
+  display: flex;
+  width: 80%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+  height: auto; /* Maintient les proportions de l'image */
+  margin: auto;
+  margin-left: 10px;
+}
+
+.Box1 h3,
+.Box2 h3,
+.Box3 h3 {
+  text-align: center;
+  padding: 0 0;
+}
+
+/* ////////////////////////////////////Texte/////////////////////////////////// */
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+h1 {
+  margin-top: 0;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+}
+#title {
+  font-size: 2.5rem;
+  text-shadow: 20px 9px 5px #00000042;
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#disclaimer {
+  font-size: 0.8rem; /* Taille de police plus petite pour le disclaimer */
+  color: #cccccc; /* Couleur légèrement plus claire pour le texte du disclaimer */
+  text-decoration: underline;
+}
+
+/* ////////////////////////////////////ID/////////////////////////////////// */
+
+#portfolio {
+  scroll-margin-top: 200px; /* Ajustez cette valeur selon la hauteur de votre en-tête */
+}
+
+/* ////////////////////////////////////GRID/////////////////////////////////// */
+
+/* Grid Page UX90 */
+
+.Grid-UX90 {
+  display: grid;
+  grid-template-areas:
+    "a1 a2 a3 "
+    "b1 b2 b3 "
+    "c1 c2 c3 "
+    "d1 d2 d3 "
+    "e1 e2 e3 ";
+}
+
+#img1 {
+  grid-area: b2;
+}
+
+/* ////////////////////////////////////Lightbox/////////////////////////////////// */
+
+.link-Galerie {
+  display: block;
+  width: 200px;
+}
+
+.link-Galerie img {
+  width: 100%;
+}
+
+#lightbox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#lightbox img {
+  max-width: 70%;
+  width: auto;
+  max-height: 80%;
+}
+
+#lightbox.active {
+  display: flex;
+}
